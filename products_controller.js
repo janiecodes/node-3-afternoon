@@ -45,7 +45,7 @@ module.exports = {
         const {id} = req.params
         const {desc} = req.query
 
-        db.update_product(id, query)
+        db.update_product([id, desc])
             .then(() => {
                 res.sendStatus(200)
             }).catch(err => {
